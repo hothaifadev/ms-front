@@ -10,8 +10,8 @@ type HeroState = {
   state: boolean;
 };
 
-export default class Hero extends Component<[], HeroState> {
-  constructor(props: []) {
+export default class Hero extends Component<unknown, HeroState> {
+  constructor(props: unknown) {
     super(props);
     this.state = {
       state: false,
