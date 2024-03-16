@@ -107,23 +107,23 @@ export default class Hero extends Component<unknown, HeroState> {
           <div className="ball1 w-40 h-40 blur-3xl bg-default-600/50 absolute rounded-full left-10 top-10"></div>
           <div className="ball1 w-72 h-72 blur-3xl bg-default-400/30 absolute rounded-full right-1/3 top-36"></div>
         </div>
-        <div className="relative">
+        <div className="relative bg-gradient-to-tl from-default-300 to-default-400">
           <img src="/images/Vector 2.svg" alt="" className="absolute left-0" />
-          <section className="mx-auto max-w-screen-xl px-4 items-center lg:flex md:px-8 h-screen ">
-            <div className="space-y-4 flex-1 sm:text-center lg:text-left rtl:lg:text-right">
+          <section className="mx-auto max-w-screen-xl px-4 items-center lg:grid md:px-8  pt-40">
+            <div className="space-y-4 mx-auto sm:text-center lg:text-left rtl:lg:text-right">
               <h1
-                className="text-gray-800 font-bold text-4xl xl:text-6xl"
+                className="text-default-100 font-bold text-4xl xl:text-6xl text-center"
                 aos-data="fade-right"
               >
                 إحجز
-                <span className="text-default-600" data-aos="fade-down">
+                <span className="text-default-700" data-aos="fade-down">
                   {" "}
                   ستِم{" "}
                 </span>
                 الخاص
               </h1>
               <p
-                className="text-gray-500 max-w-xl leading-relaxed sm:mx-auto ltr:lg:ml-0 rtl:mr-0"
+                className="text-default-900 max-w-xl leading-relaxed sm:mx-auto ltr:lg:ml-0 rtl:mr-0 font-medium text-center"
                 data-aos="fade-up"
               >
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
@@ -132,14 +132,14 @@ export default class Hero extends Component<unknown, HeroState> {
               </p>
               <div>
                 <p className="text-gray-800 py-3"></p>
-                <form className="items-center space-y-3 sm:justify-center sm:space-x-3 sm:space-y-0 sm:flex lg:justify-start gap-x-6">
+                <form className="flex justify-center space-y-3 sm:justify-center sm:space-x-3 sm:space-y-0 sm:flex lg:justify-center gap-x-6">
                   <button
-                    className="outline-none bg-default-700 text-white text-center px-4 py-3 rounded-md shadow w-full ring-offset-2 ring-default-700 focus:ring-2  sm:w-auto"
+                    className="outline-none bg-default-700 text-white text-center px-4 py-3 rounded-2xl w-full ring-offset-2 ring-default-700 focus:ring-2  sm:w-auto shadow-sm hover:shadow-md duration-300"
                     data-aos="fade-up"
                   >
                     احصل على نسخة تجريبية
                   </button>
-                  <button className="px-4 py-3 text-default-600 bg-default-50 rounded-lg duration-150 hover:bg-default-100 active:bg-default-200 ">
+                  <button className="px-4 py-3 text-default-700 bg-default-200 rounded-2xl duration-150 hover:bg-default-200 active:bg-default-200 hover:shadow-md shadow-sm border-t border-default-400 border-r border-r-default-400">
                     تواصل معنا
                   </button>
                 </form>
@@ -148,13 +148,12 @@ export default class Hero extends Component<unknown, HeroState> {
             <div className="flex-1 text-center mt-4 lg:mt-0 lg:ml-3 py-10">
               <img
                 data-aos="fade-up"
-                src="/images/1.jpg"
-                className="w-full mx-auto sm:w-10/12  lg:w-full"
+                src="/images/te.png"
+                className="w-full rounded-3xl mx-auto sm:w-10/12  lg:w-full shadow-lg"
               />
             </div>
           </section>
         </div>
-        <div className="h-screen"></div>
       </>
     );
   }
