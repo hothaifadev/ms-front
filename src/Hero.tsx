@@ -37,7 +37,7 @@ export default class Hero extends Component<unknown, HeroState> {
   render() {
     return (
       <>
-        <header className="md:fixed top-0 left-0 w-full border-b z-50 bg-white/80 backdrop-blur-lg">
+        <header className="md:fixed top-0 left-0 w-full z-50 backdrop-blur-lg">
           <nav className="relative items-center px-4 mx-auto max-w-screen-xl sm:px-8 sm:flex sm:space-x-6">
             <div className="flex justify-between">
               <a href="#">
@@ -107,20 +107,20 @@ export default class Hero extends Component<unknown, HeroState> {
           <div className="ball1 w-40 h-40 blur-3xl bg-default-600/50 absolute rounded-full left-10 top-10"></div>
           <div className="ball1 w-72 h-72 blur-3xl bg-default-400/30 absolute rounded-full right-1/3 top-36"></div>
         </div>
-        <div className="relative bg-gradient-to-tl from-default-300 to-default-400">
+        <div className="relative bg-default-50">
           <img src="/images/Vector 2.svg" alt="" className="absolute left-0" />
           <section className="mx-auto max-w-screen-xl px-4 items-center lg:grid md:px-8  pt-40">
             <div className="space-y-4 mx-auto sm:text-center lg:text-left rtl:lg:text-right">
               <h1
-                className="text-default-100 font-bold text-4xl xl:text-6xl text-center"
+                className="text-default-700 font-bold text-4xl xl:text-6xl text-center"
                 aos-data="fade-right"
               >
                 إحجز
-                <span className="text-default-700" data-aos="fade-down">
+                <span className="text-default-500" data-aos="fade-down">
                   {" "}
-                  ستِم{" "}
+                  منيو ستِم{" "}
                 </span>
-                الخاص
+                الخاص بك
               </h1>
               <p
                 className="text-default-900 max-w-xl leading-relaxed sm:mx-auto ltr:lg:ml-0 rtl:mr-0 font-medium text-center"
@@ -134,12 +134,12 @@ export default class Hero extends Component<unknown, HeroState> {
                 <p className="text-gray-800 py-3"></p>
                 <form className="flex justify-center space-y-3 sm:justify-center sm:space-x-3 sm:space-y-0 sm:flex lg:justify-center gap-x-6">
                   <button
-                    className="outline-none bg-default-700 text-white text-center px-4 py-3 rounded-2xl w-full ring-offset-2 ring-default-700 focus:ring-2  sm:w-auto shadow-sm hover:shadow-md duration-300"
+                    className="outline-none bg-default-700 text-white text-center px-4 py-3 rounded-2xl w-full ring-offset-1 ring-default-700 focus:ring-2  sm:w-auto shadow-sm hover:shadow-md duration-300"
                     data-aos="fade-up"
                   >
                     احصل على نسخة تجريبية
                   </button>
-                  <button className="px-4 py-3 text-default-700 bg-default-200 rounded-2xl duration-150 hover:bg-default-200 active:bg-default-200 hover:shadow-md shadow-sm border-t border-default-400 border-r border-r-default-400">
+                  <button className="px-4 py-3 text-default-700 rounded-2xl duration-150 active:ring ring-default-300 hover:shadow-md shadow-sm border-t border-default-400 border ring-offset-1">
                     تواصل معنا
                   </button>
                 </form>
