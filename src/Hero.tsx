@@ -20,6 +20,7 @@ export default class Hero extends Component<unknown, HeroState> {
         { title: "حول", path: "#" },
         { title: "الاسعار", path: "#" },
         { title: "تواصل معنا", path: "#" },
+        { title: "تست", path: "#" },
       ],
     };
   }
