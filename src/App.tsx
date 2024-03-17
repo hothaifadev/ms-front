@@ -2,7 +2,53 @@ import { useEffect } from "react";
 import Hero from "./Hero";
 import Aos from "aos";
 import Fragment, { FragmentType } from "./components/fragment";
+import { RiHeartsFill } from "react-icons/ri";
+import { FaCrown } from "react-icons/fa6";
+import { FaFireAlt } from "react-icons/fa";
+
+import Pricing, { PriceListProps } from "./components/Pricing";
+
 const App = () => {
+  const lists: PriceListProps[] = [
+    {
+      title: "أساسي",
+      price: "IQD25,000",
+      icon: RiHeartsFill,
+      promotion: "مناسبة للبدء معنا",
+      lists: [
+        {
+          title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
+          checked: true,
+        },
+      ],
+    },
+    {
+      title: "إحترافي",
+      price: "IQD75,000",
+      badge: "مميز",
+      promotion: "ادر مشروعك بكل احترافية بكامل الادوات اللازمة.",
+      icon: FaCrown,
+      lists: [
+        {
+          title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
+          checked: true,
+        },
+      ],
+    },
+    {
+      title: "بدون حدود",
+      promotion: "اطلق تجارتك بكل قوة.!",
+      price: "IQD75,000",
+      icon: FaFireAlt,
+      lists: [
+        {
+          title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
+          checked: true,
+        },
+      ],
+    },
+  ];
+
   const fragments: FragmentType[] = [
     {
       title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
@@ -58,6 +104,13 @@ const App = () => {
             reverse={fragment.reverse}
           />
         ))}
+      </section>
+      <section className="py-10 container mx-auto">
+        <div className="grid md:grid-cols-3 gap-4">
+          {lists.map((list) => (
+            <Pricing key={list.title} {...list} />
+          ))}
+        </div>
       </section>
     </main>
   );
