@@ -26,10 +26,10 @@ export default function Fragment(props: FragmentType) {
           props.reverse ? "md:flex-row-reverse" : ""
         }`}
       >
-        <div className="prose lg:max-w-lg lg:mx-auto">
-          <h2 className="text-default-800 mb-10" aos-data="fade-up">
+        <div className="prose lg:max-w-xl lg:mx-auto">
+          <h1 className="text-default-800 mb-10" aos-data="fade-up">
             {props.title}
-          </h2>
+          </h1>
           <p className="mb-7 md:mb-0"> {props.description}</p>
         </div>
         <img

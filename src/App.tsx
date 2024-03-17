@@ -17,8 +17,28 @@ const App = () => {
       promotion: "مناسبة للبدء معنا",
       lists: [
         {
-          title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
+          title: "تصنيفات المنتجات",
           checked: true,
+        },
+        {
+          title: "قائمة الطعام",
+          checked: true,
+        },
+        {
+          title: "ادارة الحجوزات",
+          checked: true,
+        },
+        {
+          title: "متعدد اللغات",
+          checked: true,
+        },
+        {
+          title: "الادوات اللازمة لإدارة المطعم",
+          checked: false,
+        },
+        {
+          title: "ادوات التخصيص",
+          checked: false,
         },
       ],
     },
@@ -30,19 +50,52 @@ const App = () => {
       icon: FaCrown,
       lists: [
         {
-          title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
+          title: "جميع المميزات في أساسي",
           checked: true,
+        },
+        {
+          title: "متعدد اللغات",
+          checked: true,
+        },
+        {
+          title: "الادوات اللازمة لإدارة المطعم",
+          checked: true,
+        },
+        {
+          title: "ادوات التخصيص",
+          checked: false,
         },
       ],
     },
     {
       title: "بدون حدود",
       promotion: "اطلق تجارتك بكل قوة.!",
-      price: "IQD75,000",
+      // price: "IQD75,000",
       icon: FaFireAlt,
+
       lists: [
         {
-          title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
+          title: "جميع المميزات في الاحترافية",
+          checked: true,
+        },
+        {
+          title: "ادوات التخصيص",
+          checked: true,
+        },
+        {
+          title: "مساعد مخصص",
+          checked: true,
+        },
+        {
+          title: "تأمين لوحة التحكم",
+          checked: true,
+        },
+        {
+          title: "ادوات المراقبة والتقارير",
+          checked: true,
+        },
+        {
+          title: "حماية متقدمة",
           checked: true,
         },
       ],
@@ -81,14 +134,17 @@ const App = () => {
     >
       <Hero />
       <section className="py-10">
-        <div className="prose mx-auto text-center mb-10">
-          <h1 className="text-center text-default-800" aos-data="fade-right">
+        <div className="mx-auto text-center mb-10">
+          <h1
+            className="text-center text-default-800 text-5xl font-bold mb-5"
+            aos-data="fade-right"
+          >
             نظام متكامل واجهة وبرمجة الخلفية!
           </h1>
-          <p className="text-default-800/80 font-medium ">
+          <p className="text-default-800/80 font-medium text-lg mb-3">
             تطيبق وموقع الكتروني متكامل مع لوحة تحكم احترافية لإدارها بكل سهولة.
           </p>
-          <p className="text-center text-sm font-light text-gray-600">
+          <p className="text-center font-light text-gray-600 text-lg max-w-screen-md mx-auto">
             قامت شركة التطوير التقنية بإنشاء هذا البرنامج بحيث يمكن لأصحاب
             المطاعم والمطاعم متعددة السلاسل بسهولة إدارة القائمة والأوامر
             والمخزون بالتفصيل التقارير والتحليلات.
@@ -105,12 +161,17 @@ const App = () => {
           />
         ))}
       </section>
-      <section className="py-10 container mx-auto">
-        <div className="grid md:grid-cols-3 gap-4">
-          {lists.map((list) => (
-            <Pricing key={list.title} {...list} />
-          ))}
+      <section className="py-10 md:py-32 bg-red-50 ">
+        <div className=" max-w-screen-xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4">
+            {lists.map((list) => (
+              <Pricing key={list.title} {...list} />
+            ))}
+          </div>
         </div>
+      </section>
+      <section className="py-10">
+        <h1 className="text-6xl font-bold text-center">FAQ</h1>
       </section>
     </main>
   );
