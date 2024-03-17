@@ -1,22 +1,9 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
-
-type navigationType = {
-  title: string;
-  path: string;
-}[];
+import { useEffect } from "react";
+import Header from "./Header";
 
 function Hero() {
-  const [state, setState] = useState<boolean>(false);
-  const navigation: navigationType = [
-    { title: "الرئيسية", path: "#" },
-    { title: "حول", path: "#" },
-    { title: "الاسعار", path: "#" },
-    { title: "تواصل معنا", path: "#" },
-    { title: "تست", path: "#" },
-  ];
-
   useEffect(() => {
     Aos.init();
   }, []);
@@ -25,72 +12,7 @@ function Hero() {
 
   return (
     <>
-      <header className="md:fixed top-0 left-0 w-full z-50 backdrop-blur-lg">
-        <nav className="relative items-center px-4 mx-auto max-w-screen-xl sm:px-8 sm:flex sm:space-x-6">
-          <div className="flex justify-between">
-            <a href="#">
-              <img
-                src="https://altatweertech.com/images/tatweer%20logo%20200x40.png"
-                width={120}
-                height={50}
-                alt="صورة توضيحية للتصميم"
-              />
-            </a>
-            <button
-              className="text-gray-500 outline-none sm:hidden"
-              onClick={() => setState(!state)}
-            >
-              {state ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-          <ul
-            className={`bg-white md:bg-inherit shadow-md rounded-md p-4 flex-1 absolute z-20 top-8 right-4 w-64 border sm:shadow-none sm:block sm:border-0 sm:mt-0 sm:static sm:w-auto ${
-              state ? "" : "hidden"
-            }`}
-          >
-            <div className="order-1 justify-end items-center space-y-5 sm:flex sm:space-y-0 sm:gap-x-10">
-              {navigation.map((item, idx) => (
-                <li
-                  className="text-gray-500 md:text-gray-700 font-medium hover:text-default-600"
-                  key={idx}
-                >
-                  <a href={item.path}>{item.title}</a>
-                </li>
-              ))}
-            </div>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <div className="reactive">
         <div className="ball1 w-40 h-40 blur-3xl bg-default-600/50 absolute rounded-full left-10 top-10"></div>
         <div className="ball1 w-72 h-72 blur-3xl bg-default-400/30 absolute rounded-full right-10 lg:right-1/3 top-36"></div>
