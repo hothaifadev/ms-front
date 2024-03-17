@@ -14,7 +14,7 @@ export default function Fragment(props: FragmentType) {
     Aos.init();
   });
   return (
-    <div className="relative text-center px-3 py-20  mx-auto max-w-screen-xl mb-20 ">
+    <div className="relative text-center px-3 py-20  mx-auto mb-20">
       <div
         className="blur-3xl opacity-70 w-40 h-40 rounded-full bg-indigo-500/50 absolute left-2/3 top-1/3 transform -translate-x-1/2 -translate-y-1/2"
         aos-data="fade-up"
@@ -34,7 +34,7 @@ export default function Fragment(props: FragmentType) {
         <img
           src={props.image}
           alt="صورة توضيحية للتصميم"
-          className="md:max-w-md lg:max-w-xl w-auto mx-auto drop-shadow-lg"
+          className="md:max-w-md lg:max-w-2xl w-auto mx-auto drop-shadow-lg"
         />
       </div>
     </div>
