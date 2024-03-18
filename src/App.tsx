@@ -142,8 +142,8 @@ const App = () => {
   return (
     <>
       <main
-        className="h-full font-ping-ar w-full"
-        style={{ fontFamily: "ping-ar" }}
+        className="h-full w-full"
+        style={{ fontFamily: `"ping-ar", sans-serif` }}
       >
         <Hero />
         <section className="py-10">

@@ -24,6 +24,20 @@
   --default-color-950: 12 47 69;
 }
 
+/* width */
+::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-50;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-default-600 hover:bg-default-500 rounded-lg;
+}
+
 @layer components {
   .cascade {
     @apply relative;
