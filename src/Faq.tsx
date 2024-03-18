@@ -42,7 +42,7 @@ export default function Faq() {
       <h1 className="text-5xl font-bold text-center">FAQ</h1>
       {questions.map((question, index) => (
         <QuestionFaq
-          key={index}
+          key={`question-${index}`}
           question={question.question}
           answer={question.answer}
         />

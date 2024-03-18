@@ -60,7 +60,7 @@ export default function Header() {
               {navigation.map((item, idx) => (
                 <li
                   className="text-default-500 md:text-default-700 font-medium hover:text-default-600"
-                  key={idx}
+                  key={`nav-${idx}`}
                 >
                   <a href={item.path}>{item.title}</a>
                 </li>

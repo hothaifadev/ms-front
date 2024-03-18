@@ -54,8 +54,11 @@ function Pricing(props: PriceListProps) {
             </p>
             <div>
               <ul className="pb-10">
-                {props.lists.map((list) => (
-                  <li className="flex items-center mb-7 gap-3 ">
+                {props.lists.map((list, index) => (
+                  <li
+                    className="flex items-center mb-7 gap-3"
+                    key={`list-${index}`}
+                  >
                     {list.checked ? (
                       <FaCircleCheck
                         className={`w-5 h-5 text-default-500 group-hover:text-gray-50`}

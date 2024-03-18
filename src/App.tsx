@@ -8,6 +8,7 @@ import { FaFireAlt } from "react-icons/fa";
 
 import Pricing, { PriceListProps } from "./components/Pricing";
 import Faq from "./Faq";
+import Features from "./Features";
 
 const App = () => {
   const lists: PriceListProps[] = [
@@ -151,9 +152,9 @@ const App = () => {
             والمخزون بالتفصيل التقارير والتحليلات.
           </p>
         </div>
-        {fragments.map((fragment) => (
+        {fragments.map((fragment, index) => (
           <Fragment
-            key={fragment.title}
+            key={`Fragment-${index}`}
             title={fragment.title}
             description={fragment.description}
             image={fragment.image}
@@ -165,8 +166,8 @@ const App = () => {
       <section className="py-10 md:py-32 bg-red-50 ">
         <div className=" max-w-screen-xl mx-auto">
           <div className="grid md:grid-cols-3 gap-4">
-            {lists.map((list) => (
-              <Pricing key={list.title} {...list} />
+            {lists.map((list, idx) => (
+              <Pricing key={`list-${idx}`} {...list} />
             ))}
           </div>
         </div>
@@ -174,6 +175,12 @@ const App = () => {
       <section className="py-10 bg-lime-50">
         <div className="max-w-screen-lg mx-auto">
           <Faq />
+        </div>
+      </section>
+
+      <section className="py-10 bg-white">
+        <div className="max-w-screen-lg mx-auto">
+          <Features />
         </div>
       </section>
     </main>
