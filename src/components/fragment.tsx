@@ -14,7 +14,7 @@ export default function Fragment(props: FragmentType) {
     Aos.init();
   });
   return (
-    <div className="relative text-center px-3 py-20  mx-auto mb-20">
+    <div className="relative text-center px-3 py-20  mx-auto mb-5">
       <div className="absolute left-10 bottom-0" aos-data="fade-up">
         <div className="blur-3xl opacity-70 w-40 h-40 rounded-full bg-indigo-500/50"></div>
       </div>

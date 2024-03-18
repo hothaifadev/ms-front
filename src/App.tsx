@@ -124,6 +124,15 @@ const App = () => {
       alt: "صورة توضيحية للتصميم",
       reverse: false,
     },
+    {
+      title: "تطبيق موبايل وموقع الكتروني وادارتها بشكل كامل",
+      description: `قامت شركة التطوير التقنية بإنشاء هذا البرنامج بحيث يمكن لأصحاب
+            المطاعم والمطاعم متعددة السلاسل بسهولة إدارة القائمة والأوامر
+            والمخزون بالتفصيل التقارير والتحليلات.`,
+      image: "/images/demo-moblie.png",
+      alt: "صورة توضيحية للتصميم",
+      reverse: true,
+    },
   ];
 
   useEffect(() => {
@@ -155,16 +164,18 @@ const App = () => {
               والمخزون بالتفصيل التقارير والتحليلات.
             </p>
           </div>
-          {fragments.map((fragment, index) => (
-            <Fragment
-              key={`Fragment-${index}`}
-              title={fragment.title}
-              description={fragment.description}
-              image={fragment.image}
-              alt={fragment.alt}
-              reverse={fragment.reverse}
-            />
-          ))}
+          <div className="bg-[url('/images/vector4.svg')] bg-no-repeat bg-[458px_330px]">
+            {fragments.map((fragment, index) => (
+              <Fragment
+                key={`Fragment-${index}`}
+                title={fragment.title}
+                description={fragment.description}
+                image={fragment.image}
+                alt={fragment.alt}
+                reverse={fragment.reverse}
+              />
+            ))}
+          </div>
         </section>
         <section className="py-10 md:py-32 bg-red-50" id="pricing">
           <div className=" max-w-screen-xl mx-auto">
