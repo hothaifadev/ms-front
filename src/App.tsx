@@ -7,6 +7,7 @@ import { FaCrown } from "react-icons/fa6";
 import { FaFireAlt } from "react-icons/fa";
 
 import Pricing, { PriceListProps } from "./components/Pricing";
+import Faq from "./Faq";
 
 const App = () => {
   const lists: PriceListProps[] = [
@@ -170,8 +171,10 @@ const App = () => {
           </div>
         </div>
       </section>
-      <section className="py-10">
-        <h1 className="text-6xl font-bold text-center">FAQ</h1>
+      <section className="py-10 bg-lime-50">
+        <div className="max-w-screen-lg mx-auto">
+          <Faq />
+        </div>
       </section>
     </main>
   );
