@@ -146,10 +146,10 @@ const App = () => {
         style={{ fontFamily: `"ping-ar", sans-serif` }}
       >
         <Hero />
-        <section className="py-10">
+        <section className="py-10 md:px-0 px-3">
           <div className="mx-auto text-center mb-10">
             <h1
-              className="text-center text-default-800 text-5xl font-bold mb-5"
+              className="text-center text-default-800 text-3xl md:text-5xl font-bold mb-5"
               aos-data="fade-right"
             >
               نظام متكامل واجهة وبرمجة الخلفية!
@@ -177,7 +177,10 @@ const App = () => {
             ))}
           </div>
         </section>
-        <section className="py-10 md:py-32 bg-red-50" id="pricing">
+        <section
+          className="py-10 md:py-32 bg-default-50 px-5 mb-5 md:mb-0 md:px-0"
+          id="pricing"
+        >
           <div className=" max-w-screen-xl mx-auto">
             <div className="grid md:grid-cols-3 gap-4">
               {lists.map((list, idx) => (
@@ -186,7 +189,7 @@ const App = () => {
             </div>
           </div>
         </section>
-        <section className="py-10 bg-lime-50" id="faq">
+        <section className="py-10 bg-default-200" id="faq">
           <div className="max-w-screen-lg mx-auto">
             <Faq />
           </div>

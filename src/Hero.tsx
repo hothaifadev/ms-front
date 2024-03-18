@@ -19,11 +19,10 @@ function Hero() {
       </div>
       <div className="relative bg-default-50">
         <img src="/images/Vector 2.svg" alt="" className="absolute left-0" />
-
-        <section className="mx-auto max-w-screen-xl px-4 items-center lg:grid md:px-8  pt-40">
+        <section className="mx-auto max-w-screen-2xl px-4 items-center lg:grid grid-cols-1 md:grid-cols-2 md:px-8 pt-40">
           <div className="space-y-4 mx-auto sm:text-center lg:text-left rtl:lg:text-right">
             <h1
-              className="text-default-700 font-bold text-4xl xl:text-6xl text-center"
+              className="text-default-700 font-bold text-4xl xl:text-5xl text-center"
               aos-data="fade-right"
             >
               إحجز

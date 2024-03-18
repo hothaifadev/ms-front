@@ -14,7 +14,7 @@ export default function QuestionFaq(props: QuestionFaqProps) {
     <div
       className={`p-5 rounded-tl-[2rem] rounded-br-[2rem] ${
         open ? "bg-white" : ""
-      }`}
+      } mb-3`}
     >
       <div
         className="flex items-center justify-between mb-4"
@@ -29,7 +29,7 @@ export default function QuestionFaq(props: QuestionFaqProps) {
           )}
         </button>
       </div>
-      {open ? <p className="text-lime-950/95">{props.answer}</p> : ""}
+      {open ? <p className="text-default-950/95">{props.answer}</p> : ""}
     </div>
   );
 }

@@ -20,7 +20,7 @@ export type PriceListProps = {
 function Pricing(props: PriceListProps) {
   return (
     <>
-      <div className="bg-white  shadow-xl px-10 rounded-xl py-10 duration-300 hover:scale-[1.03] hover:-translate-y-4 ">
+      <div className="bg-white md:shadow-xl px-10 rounded-xl py-10 duration-300 hover:scale-[1.03] hover:-translate-y-4 ">
         <div className="grid h-full">
           <div>
             <div className="flex justify-between items-center mb-2">
