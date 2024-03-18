@@ -1,5 +1,4 @@
 import QuestionFaq from "./components/QuestionFaq";
-import ntc from "./ntc";
 
 export default function Faq() {
   const questions: { question: string; answer: string }[] = [
