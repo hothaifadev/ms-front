@@ -9,6 +9,7 @@ import { FaFireAlt } from "react-icons/fa";
 import Pricing, { PriceListProps } from "./components/Pricing";
 import Faq from "./Faq";
 import Features from "./Features";
+import Footer from "./Footer";
 
 const App = () => {
   const lists: PriceListProps[] = [
@@ -130,60 +131,64 @@ const App = () => {
   }, []);
 
   return (
-    <main
-      className="h-full font-ping-ar w-full"
-      style={{ fontFamily: "ping-ar" }}
-    >
-      <Hero />
-      <section className="py-10">
-        <div className="mx-auto text-center mb-10">
-          <h1
-            className="text-center text-default-800 text-5xl font-bold mb-5"
-            aos-data="fade-right"
-          >
-            نظام متكامل واجهة وبرمجة الخلفية!
-          </h1>
-          <p className="text-default-800/80 font-medium text-lg mb-3">
-            تطيبق وموقع الكتروني متكامل مع لوحة تحكم احترافية لإدارها بكل سهولة.
-          </p>
-          <p className="text-center font-light text-gray-600 text-lg max-w-screen-md mx-auto">
-            قامت شركة التطوير التقنية بإنشاء هذا البرنامج بحيث يمكن لأصحاب
-            المطاعم والمطاعم متعددة السلاسل بسهولة إدارة القائمة والأوامر
-            والمخزون بالتفصيل التقارير والتحليلات.
-          </p>
-        </div>
-        {fragments.map((fragment, index) => (
-          <Fragment
-            key={`Fragment-${index}`}
-            title={fragment.title}
-            description={fragment.description}
-            image={fragment.image}
-            alt={fragment.alt}
-            reverse={fragment.reverse}
-          />
-        ))}
-      </section>
-      <section className="py-10 md:py-32 bg-red-50 ">
-        <div className=" max-w-screen-xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-4">
-            {lists.map((list, idx) => (
-              <Pricing key={`list-${idx}`} {...list} />
-            ))}
+    <>
+      <main
+        className="h-full font-ping-ar w-full"
+        style={{ fontFamily: "ping-ar" }}
+      >
+        <Hero />
+        <section className="py-10">
+          <div className="mx-auto text-center mb-10">
+            <h1
+              className="text-center text-default-800 text-5xl font-bold mb-5"
+              aos-data="fade-right"
+            >
+              نظام متكامل واجهة وبرمجة الخلفية!
+            </h1>
+            <p className="text-default-800/80 font-medium text-lg mb-3">
+              تطيبق وموقع الكتروني متكامل مع لوحة تحكم احترافية لإدارها بكل
+              سهولة.
+            </p>
+            <p className="text-center font-light text-gray-600 text-lg max-w-screen-md mx-auto">
+              قامت شركة التطوير التقنية بإنشاء هذا البرنامج بحيث يمكن لأصحاب
+              المطاعم والمطاعم متعددة السلاسل بسهولة إدارة القائمة والأوامر
+              والمخزون بالتفصيل التقارير والتحليلات.
+            </p>
           </div>
-        </div>
-      </section>
-      <section className="py-10 bg-lime-50">
-        <div className="max-w-screen-lg mx-auto">
-          <Faq />
-        </div>
-      </section>
+          {fragments.map((fragment, index) => (
+            <Fragment
+              key={`Fragment-${index}`}
+              title={fragment.title}
+              description={fragment.description}
+              image={fragment.image}
+              alt={fragment.alt}
+              reverse={fragment.reverse}
+            />
+          ))}
+        </section>
+        <section className="py-10 md:py-32 bg-red-50" id="pricing">
+          <div className=" max-w-screen-xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-4">
+              {lists.map((list, idx) => (
+                <Pricing key={`list-${idx}`} {...list} />
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="py-10 bg-lime-50" id="faq">
+          <div className="max-w-screen-lg mx-auto">
+            <Faq />
+          </div>
+        </section>
 
-      <section className="py-10 bg-white">
-        <div className="max-w-screen-lg mx-auto">
-          <Features />
-        </div>
-      </section>
-    </main>
+        <section className="py-10 bg-gray-50/50">
+          <div className="max-w-screen-xl mx-auto">
+            <Features />
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 };
 
