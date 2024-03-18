@@ -11,17 +11,17 @@
   background-color: #fff;
 
   --default-color: #2ba6cc;
-  --default-color-50: 243 249 252;
-  --default-color-100: 231 244 249;
-  --default-color-200: 198 231 241;
-  --default-color-300: 148 213 229;
-  --default-color-400: 91 191 213;
-  --default-color-500: 53 167 194;
-  --default-color-600: 37 137 164;
-  --default-color-700: 31 109 133;
-  --default-color-800: 30 92 110;
-  --default-color-900: 30 77 92;
-  --default-color-950: 20 50 61;
+  --default-color-50: 241 249 254;
+  --default-color-100: 226 243 252;
+  --default-color-200: 190 230 249;
+  --default-color-300: 133 211 244;
+  --default-color-400: 68 188 236;
+  --default-color-500: 28 165 219;
+  --default-color-600: 16 144 203;
+  --default-color-700: 13 105 151;
+  --default-color-800: 15 90 125;
+  --default-color-900: 18 74 104;
+  --default-color-950: 12 47 69;
 }
 
 @layer components {
