@@ -1,7 +1,6 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Header from "./Header";
 
 function Hero() {
   useEffect(() => {
@@ -12,7 +11,6 @@ function Hero() {
 
   return (
     <>
-      <Header />
       <div className="reactive">
         <div className="ball1 w-40 h-40 blur-3xl bg-default-600/50 absolute rounded-full left-10 top-10"></div>
         <div className="ball1 w-72 h-72 blur-3xl bg-default-400/30 absolute rounded-full right-10 lg:right-1/3 top-36"></div>

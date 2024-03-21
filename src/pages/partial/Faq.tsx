@@ -1,4 +1,4 @@
-import QuestionFaq from "./components/QuestionFaq";
+import QuestionFaq from "../../components/QuestionFaq";
 
 export default function Faq() {
   const questions: { question: string; answer: string }[] = [

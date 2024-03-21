@@ -83,12 +83,12 @@ function Pricing(props: PriceListProps) {
             </div>
           </div>
           <div className="self-end">
-            <button
-              type="submit"
-              className="inline-flex items-center justify-center space-x-2 py-3 px-4 border border-transparent text-sm font-medium rounded-2xl text-default-50 hover:text-default-700 bg-default-600 hover:bg-default-300 transition-colors w-full"
+            <a
+              href="/register"
+              className="inline-flex items-center justify-center space-x-2 py-3 px-4 border border-transparent text-sm font-medium rounded-2xl text-default-50 bg-default-600 hover:bg-default-500 transition-colors w-full"
             >
               <div>احجز الآن</div>
-            </button>{" "}
+            </a>
           </div>
         </div>
       </div>

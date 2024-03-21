@@ -18,9 +18,8 @@ export default function Header() {
   const navigation: navigationType = [
     { title: "الرئيسية", path: "#" },
     { title: "حول", path: "#" },
-    { title: "الاسعار", path: "#" },
-    { title: "تواصل معنا", path: "#" },
-    { title: "تست", path: "#" },
+    { title: "الاسعار", path: "/#pricing" },
+    { title: "احجز الان", path: "/register" },
   ];
 
   return (
@@ -32,7 +31,7 @@ export default function Header() {
       >
         <nav className="relative items-center px-4 mx-auto max-w-screen-xl sm:px-8 sm:flex sm:space-x-6">
           <div className="flex justify-between">
-            <a href="#">
+            <a href="/">
               <img
                 src="https://altatweertech.com/images/tatweer%20logo%20200x40.png"
                 width={120}

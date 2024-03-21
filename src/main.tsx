@@ -2,12 +2,25 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-import AOS from "aos";
+import Home from "./pages/Home.tsx";
+import Register from "./pages/Register.tsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-AOS.init();
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <App>
+      <RouterProvider router={router} />
+    </App>
   </React.StrictMode>
 );
